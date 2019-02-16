@@ -1,0 +1,16 @@
+[
+{
+  "modid": "yabm",
+  "name": "YABM",
+  "description": "Yet Another Backpack Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Jade_TheCat"],
+  "credits": "Azanor, for Baubles.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
