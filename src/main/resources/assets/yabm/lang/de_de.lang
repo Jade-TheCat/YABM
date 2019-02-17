@@ -1,0 +1,6 @@
+ui.backpack.name=Rucksack
+item.small_backpack.name=Kleiner Rucksack
+item.medium_backpack.name=Mittlerer Rucksack
+item.large_backpack.name=Großer Rucksack
+key.openBackpack=Öffne den Rucksack
+key.categories.yabm=YABM

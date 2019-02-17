@@ -1,0 +1,6 @@
+ui.backpack.name=Duffle
+item.small_backpack.name=Small Duffle
+item.medium_backpack.name=Medium Duffle
+item.large_backpack.name=Large Duffle
+key.openBackpack=Open Backpack
+key.categories.yabm=YABM

@@ -1,0 +1,6 @@
+ui.backpack.name=Mochila
+item.small_backpack.name=Mochila Pequeña
+item.medium_backpack.name=Mochila Mediana
+item.large_backpack.name=Mochila Grande
+key.openBackpack=Abrir Mochila
+key.categories.yabm=YABM

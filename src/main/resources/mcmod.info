@@ -8,8 +8,8 @@
   "url": "",
   "updateUrl": "",
   "authorList": ["Jade_TheCat"],
-  "credits": "Azanor, for Baubles.",
-  "logoFile": "",
+  "credits": "Azanor, for Baubles. tterag and the Tropicraft crew for some of the reference code for getting the inventory working.",
+  "logoFile": "YABM.png",
   "screenshots": [],
   "dependencies": []
 }

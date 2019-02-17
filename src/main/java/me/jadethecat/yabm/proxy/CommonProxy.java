@@ -1,20 +1,19 @@
 package me.jadethecat.yabm.proxy;
 
-import me.jadethecat.yabm.YABM;
+import me.jadethecat.yabm.client.InputHandler;
+import me.jadethecat.yabm.client.Keybinds;
+import me.jadethecat.yabm.item.BackpackCapabilityProvider;
 import me.jadethecat.yabm.item.BackpackItems;
-import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.network.IGuiHandler;
-
-import javax.annotation.Nullable;
 
 public class CommonProxy {
     public void preInit(FMLPreInitializationEvent e) {
-
+        BackpackCapabilityProvider.register();
+        Keybinds.register();
+        MinecraftForge.EVENT_BUS.register(new InputHandler());
     }
     public void init(FMLInitializationEvent e) {
 
@@ -26,6 +25,5 @@ public class CommonProxy {
     public void registerEventHandlers() {
         MinecraftForge.EVENT_BUS.register(new BackpackItems());
     }
-    public void registerRenders() {}
 
 }

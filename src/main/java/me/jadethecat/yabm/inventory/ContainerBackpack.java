@@ -8,6 +8,7 @@ import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.NonNullList;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
@@ -17,28 +18,33 @@ import scala.xml.PrettyPrinter;
 import javax.annotation.Nonnull;
 
 public class ContainerBackpack extends Container {
-
-    public ContainerBackpack(InventoryPlayer playerInv, final ItemBackpack backpack) {
-        IItemHandler inventory = backpack.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, EnumFacing.NORTH);
-        addSlotToContainer(new SlotItemHandler(inventory, 0, 80, 35) {
-            @Override
-            public boolean isItemValid(@Nonnull ItemStack stack) {
-                return !(stack.getItem() instanceof ItemBackpack) || super.isItemValid(stack);
+    InventoryBackpack inventory;
+    public int numRows;
+    public ContainerBackpack(InventoryPlayer playerInv, IItemHandler iItemHandler) {
+        this.inventory = (InventoryBackpack)iItemHandler;
+        this.numRows = inventory.getSlots() / 9;
+        for (int j = 0; j < numRows; ++j) {
+            for (int k = 0; k < 9; ++k) {
+                addSlotToContainer(new SlotItemHandler(inventory, k + j * 9, 8 + k * 18, 18 + j * 18) {
+                    @Override
+                    public boolean isItemValid(@Nonnull ItemStack stack) {
+                        return !(stack.getItem() instanceof ItemBackpack) && super.isItemValid(stack);
+                    }
+                });
             }
+        }
 
-        });
 
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 9; j++) {
-                addSlotToContainer(new Slot(playerInv, j + i * 9 + 9, 8 + j * 18, 84 + i * 18));
+                addSlotToContainer(new Slot(playerInv, j + i * 9 + 9, 8 + j * 18, (31 + (this.numRows * 18)) + i * 18));
             }
         }
 
         for (int k = 0; k < 9; k++) {
-            addSlotToContainer(new Slot(playerInv, k, 8 + k * 18, 142));
+            addSlotToContainer(new Slot(playerInv, k, 8 + k * 18, (31 + (this.numRows * 18)) + 58));
         }
     }
-
 
 
     @Override
