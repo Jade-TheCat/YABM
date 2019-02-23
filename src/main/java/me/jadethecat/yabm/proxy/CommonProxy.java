@@ -12,8 +12,6 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class CommonProxy {
     public void preInit(FMLPreInitializationEvent e) {
         BackpackCapabilityProvider.register();
-        Keybinds.register();
-        MinecraftForge.EVENT_BUS.register(new InputHandler());
     }
     public void init(FMLInitializationEvent e) {
 

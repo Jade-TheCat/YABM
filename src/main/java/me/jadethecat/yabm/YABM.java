@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import org.apache.logging.log4j.Logger;
 
-@Mod(modid = "yabm", name = "YABM", version = "1.0.0", dependencies = "required-after:baubles@[1.5.2,)")
+@Mod(modid = "yabm", name = "YABM", version = "1.0.1", dependencies = "required-after:baubles@[1.5.2,)")
 public class YABM {
     @Mod.Instance
     public static YABM instance;
