@@ -9,16 +9,19 @@ repositories {
         url = "https://maven.fabricmc.net"
     }
 	maven {
+		url = "https://repo1.maven.org/maven2/"
+	}
+	maven {
 		name = "Cotton"
 		url = "http://server.bbkr.space:8081/artifactory/libs-release/"
 	}
 	maven {
-        url = "https://jitpack.io"
-    }
-	maven {
 		name = "NerdHubMC"
 		url = "https://maven.abusedmaster.xyz/"
 	}
+	maven {
+        url = "https://jitpack.io"
+    }
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
