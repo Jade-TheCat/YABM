@@ -4,11 +4,14 @@ import me.jadethecat.yabm.gui.BackpackController;
 import me.jadethecat.yabm.gui.EnderBackpackController;
 import me.jadethecat.yabm.inventory.EnderBackpackComponent;
 import me.jadethecat.yabm.inventory.EnderComponent;
+import me.jadethecat.yabm.inventory.EnderCopyStrategy;
 import me.jadethecat.yabm.item.Backpack;
 import me.jadethecat.yabm.item.EnderBackpack;
 import nerdhub.cardinal.components.api.ComponentRegistry;
 import nerdhub.cardinal.components.api.ComponentType;
 import nerdhub.cardinal.components.api.event.EntityComponentCallback;
+import nerdhub.cardinal.components.api.util.EntityComponents;
+import nerdhub.cardinal.components.api.util.RespawnCopyStrategy;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.minecraft.entity.player.PlayerEntity;
@@ -36,5 +39,6 @@ public class YABM implements ModInitializer {
 
 		// Register Component with Cardinal Components
 		EntityComponentCallback.event(PlayerEntity.class).register((player, components) -> components.put(ENDER_BACKPACK_COMPONENT, new EnderBackpackComponent((player))));
+		EntityComponents.setRespawnCopyStrategy(ENDER_BACKPACK_COMPONENT, new EnderCopyStrategy());
 	}
 }
