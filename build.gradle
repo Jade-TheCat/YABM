@@ -5,9 +5,16 @@ plugins {
 }
 repositories {
 	maven {
+        name = "FabricMC"
+        url = "https://maven.fabricmc.net"
+    }
+	maven {
 		name = "Cotton"
 		url = "http://server.bbkr.space:8081/artifactory/libs-release/"
 	}
+	maven {
+        url = "https://jitpack.io"
+    }
 	maven {
 		name = "NerdHubMC"
 		url = "https://maven.abusedmaster.xyz/"
@@ -30,7 +37,7 @@ dependencies {
     modCompile "net.fabricmc:fabric-loader:0.6.1+build.165"
             
     //Fabric api
-    modCompile "net.fabricmc.fabric-api:fabric-api:0.3.2+build.230-1.15"
+    modCompile "net.fabricmc.fabric-api:fabric-api:0.3.2+build.226-1.14"
 
 	//LibGUI
   	modCompile "io.github.cottonmc:LibGui:1.3.2"
