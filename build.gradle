@@ -9,9 +9,6 @@ repositories {
         url = "https://maven.fabricmc.net"
     }
 	maven {
-		url = "https://repo1.maven.org/maven2/"
-	}
-	maven {
 		name = "Cotton"
 		url = "http://server.bbkr.space:8081/artifactory/libs-release/"
 	}
@@ -19,9 +16,6 @@ repositories {
 		name = "NerdHubMC"
 		url = "https://maven.abusedmaster.xyz/"
 	}
-	maven {
-        url = "https://jitpack.io"
-    }
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -46,8 +40,8 @@ dependencies {
   	modCompile "io.github.cottonmc:LibGui:1.3.2"
 	
 	//Cardinal Components
-	modImplementation "com.github.NerdHubMC:Cardinal-Components-API:2.0.1"
-    include "com.github.NerdHubMC:Cardinal-Components-API:2.0.1"
+	modImplementation curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/cardinal-components/files/2786027")
+    include curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/cardinal-components/files/2786027")
 
 	//NBTCrafting
 	modImplementation curse.resolveUrl("https://www.curseforge.com/minecraft/mc-mods/nbt-crafting/files/2773989")
