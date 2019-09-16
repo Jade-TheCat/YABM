@@ -12,6 +12,7 @@ before_script:
 build:
   stage: build
   script:
+    - ./gradlew genSources
     - ./gradlew build
   artifacts:
     paths:
