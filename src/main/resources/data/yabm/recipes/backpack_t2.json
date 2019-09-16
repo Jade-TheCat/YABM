@@ -1,0 +1,33 @@
+{
+    "type": "crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "yabm:backpack",
+            "data": {
+                "deny": {
+                    "Size": "$1.."
+                }
+            }
+        },
+        {
+            "item": "minecraft:gold_ingot"
+        },
+        {
+            "item": "minecraft:gold_ingot"
+        },
+        {
+            "item": "minecraft:gold_ingot"
+        },
+        {
+            "item": "minecraft:chest"
+        }
+    ],
+    "result": {
+        "item": "yabm:backpack",
+        "count": 1,
+        "data": {
+            "$": "$ i0",
+            "Size": 1
+        }
+    }
+}

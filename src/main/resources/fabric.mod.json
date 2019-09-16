@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "yabm",
+  "version": "${version}",
+
+  "name": "YABM",
+  "description": "Yet Another Backpack Mod",
+  "authors": [
+    "JadeTheCat"
+  ],
+  "contact": {
+    "homepage": "https://jadethecat.me/",
+    "sources": ""
+  },
+
+  "license": "MIT",
+  "icon": "assets/yabm/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "me.jadethecat.yabm.YABM"
+    ],
+    "client": [
+      "me.jadethecat.yabm.client.YABMClient"
+    ]
+  },
+
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*",
+    "libgui": "1.3.2"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

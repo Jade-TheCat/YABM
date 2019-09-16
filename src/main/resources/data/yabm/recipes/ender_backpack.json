@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "GOG",
+        "OEO",
+        "GOG"
+    ],
+    "key": {
+        "G": {
+            "item": "minecraft:gold_ingot"
+        },
+        "O": {
+            "item": "minecraft:obsidian"
+        },
+        "E": {
+            "item": "minecraft:ender_eye"
+        }
+    },
+    "result": {
+        "item": "yabm:ender_backpack",
+        "count": 1
+    }
+}

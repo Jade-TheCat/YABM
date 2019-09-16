@@ -1,0 +1,9 @@
+{
+    "gui.yabm.backpack": "Backpack",
+    "item.yabm.backpack": "Backpack",
+    "item.yabm.backpack.tooltip.small": "Size: §7Small§r",
+    "item.yabm.backpack.tooltip.medium": "Size: §5Medium§r",
+    "item.yabm.backpack.tooltip.large": "Size: §6Large§r",
+    "gui.yabm.ender_backpack": "Ender Backpack",
+    "item.yabm.ender_backpack": "Ender Backpack"
+}
