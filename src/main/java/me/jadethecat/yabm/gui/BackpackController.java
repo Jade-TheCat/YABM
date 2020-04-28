@@ -13,11 +13,11 @@ import net.minecraft.text.TranslatableText;
 
 public class BackpackController extends CottonScreenController {
     ItemStack theStack;
-    public BackpackController(int syncId, PlayerInventory playerInventory, ItemStack stack, int size, int slotNumber) {
+    public BackpackController(int syncId, PlayerInventory playerInventory, ItemStack stack, int size, int slotId) {
         super(RecipeType.SMELTING, syncId, playerInventory);
         theStack = stack;
         this.playerInventory = playerInventory;
-        this.blockInventory = new BackpackInventory(theStack,  BackpackInventory.Size.values()[size], playerInventory, slotNumber);
+        this.blockInventory = new BackpackInventory(theStack,  BackpackInventory.Size.values()[size], playerInventory, slotId);
 
         WGridPanel rootPanel = (WGridPanel) getRootPanel();
         Text label = stack.hasCustomName() ? stack.getName() : new TranslatableText("gui.yabm.backpack");

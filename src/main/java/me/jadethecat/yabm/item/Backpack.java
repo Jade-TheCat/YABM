@@ -52,10 +52,11 @@ public class Backpack extends Item {
                 stack.getTag().putInt("Size", size.ordinal());
             }
             final int sizeInt = size != null ? size.ordinal() : 0;
+            int slot = hand == Hand.MAIN_HAND ? playerEntity.inventory.selectedSlot : 40;
             ContainerProviderRegistry.INSTANCE.openContainer(new Identifier("yabm", "backpack"), playerEntity, (buf) -> {
                 buf.writeItemStack(stack);
                 buf.writeInt(sizeInt);
-                buf.writeInt(playerEntity.inventory.getSlotWithStack(stack));
+                buf.writeInt(slot);
             });
         }
 

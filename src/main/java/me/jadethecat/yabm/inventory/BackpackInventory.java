@@ -2,6 +2,7 @@ package me.jadethecat.yabm.inventory;
 
 import me.jadethecat.yabm.item.Backpack;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemStack;
@@ -15,10 +16,10 @@ public class BackpackInventory implements ImplementedInventory {
     private Inventory theInventory;
     private int theSlot;
 
-    public BackpackInventory(ItemStack stack, Size size, Inventory pInv, int slotNumber) {
+    public BackpackInventory(ItemStack stack, Size size, PlayerInventory pInv, int slotId) {
         theStack = stack;
         theInventory = pInv;
-        theSlot = slotNumber;
+        theSlot = slotId;
         switch (size) {
             case SMALL:
                 theList = DefaultedList.ofSize(9, ItemStack.EMPTY);
