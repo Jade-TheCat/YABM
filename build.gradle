@@ -49,12 +49,13 @@ dependencies {
 	include "io.github.cottonmc:LibGui:1.8.2+1.15.2"
 	
 	//Cardinal Components
-	modImplementation "com.github.NerdHubMC:Cardinal-Components-API:2.3.3"
-    include "com.github.NerdHubMC.Cardinal-Components-API:cardinal-components-base:2.3.3"
-	include "com.github.NerdHubMC.Cardinal-Components-API:cardinal-components-entity:2.3.3"
+	modImplementation "com.github.OnyxStudios:Cardinal-Components-API:2.3.3"
+    include "com.github.OnyxStudios:Cardinal-Components-API:cardinal-components-base:2.3.3"
+	include "com.github.OnyxStudios:Cardinal-Components-API:cardinal-components-entity:2.3.3"
 
 	//NBTCrafting
 	modImplementation "nbt-crafting:nbtcrafting:1.2.15+1.15.1"
+	include "nbt-crafting:nbtcrafting:1.2.15+1.15.1"
 }
 
 processResources {
