@@ -7,4 +7,5 @@ public class BackpackScreen extends CottonScreen<BackpackController> {
     public BackpackScreen(BackpackController container, PlayerEntity player) {
         super(container, player);
     }
+
 }

@@ -32,7 +32,7 @@ public class Backpack extends Item {
             if (!stack.hasTag()) {
                 stack.setTag(new CompoundTag());
             }
-            if (!stack.getTag().containsKey("Size")) {
+            if (!stack.getTag().contains("Size")) {
                 stack.getTag().putInt("Size", 0);
             } else {
                 switch(stack.getTag().getInt("Size")) {
@@ -66,7 +66,7 @@ public class Backpack extends Item {
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip,
             TooltipContext context) {
-        int size = stack.hasTag() && stack.getTag().containsKey("Size") ? stack.getTag().getInt("Size") : 0;
+        int size = stack.hasTag() && stack.getTag().contains("Size") ? stack.getTag().getInt("Size") : 0;
         switch (size) {
             case 0:
                 tooltip.add(new TranslatableText("item.yabm.backpack.tooltip.small"));

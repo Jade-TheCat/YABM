@@ -1,5 +1,6 @@
 package me.jadethecat.yabm.inventory;
 
+import me.jadethecat.yabm.YABM;
 import me.jadethecat.yabm.item.Backpack;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
@@ -34,7 +35,7 @@ public class BackpackInventory implements ImplementedInventory {
                 theList = DefaultedList.ofSize(9, ItemStack.EMPTY);
                 break;
         }
-        if (stack.getTag().containsKey("Inventory")) 
+        if (stack.getTag().contains("Inventory")) 
             Inventories.fromTag(theStack.getTag().getCompound("Inventory"), theList);
     }
 
@@ -45,11 +46,12 @@ public class BackpackInventory implements ImplementedInventory {
 
     @Override
     public boolean canInsertInvStack(int slot, ItemStack stack, Direction side) {
-        if (!(stack.getItem() instanceof Backpack)) {
-            return false;
-        } else {
-            return true;
-        }
+        return !(stack.getItem() instanceof Backpack);
+    }
+
+    @Override
+    public boolean isValidInvStack(int slot, ItemStack stack) {
+        return !(stack.getItem() instanceof Backpack);
     }
 
     @Override

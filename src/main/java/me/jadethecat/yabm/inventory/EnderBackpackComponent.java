@@ -20,7 +20,7 @@ public class EnderBackpackComponent implements EnderComponent {
 
     @Override
     public void fromTag(CompoundTag tag) {
-        CompoundTag inventory = tag.containsKey("EnderBackpack") ? tag.getCompound("EnderBackpack") : new CompoundTag();
+        CompoundTag inventory = tag.contains("EnderBackpack") ? tag.getCompound("EnderBackpack") : new CompoundTag();
         Inventories.fromTag(inventory, theList);
     }
 

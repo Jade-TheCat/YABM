@@ -5,6 +5,9 @@ import io.github.cottonmc.cotton.gui.widget.WGridPanel;
 import io.github.cottonmc.cotton.gui.widget.WItemSlot;
 import io.github.cottonmc.cotton.gui.widget.WLabel;
 import me.jadethecat.yabm.inventory.BackpackInventory;
+import me.jadethecat.yabm.item.Backpack;
+import net.minecraft.container.SlotActionType;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.RecipeType;
@@ -13,12 +16,13 @@ import net.minecraft.text.TranslatableText;
 
 public class BackpackController extends CottonScreenController {
     ItemStack theStack;
+    int theSlot;
     public BackpackController(int syncId, PlayerInventory playerInventory, ItemStack stack, int size, int slotId) {
         super(RecipeType.SMELTING, syncId, playerInventory);
         theStack = stack;
         this.playerInventory = playerInventory;
         this.blockInventory = new BackpackInventory(theStack,  BackpackInventory.Size.values()[size], playerInventory, slotId);
-
+        this.theSlot = slotId;
         WGridPanel rootPanel = (WGridPanel) getRootPanel();
         Text label = stack.hasCustomName() ? stack.getName() : new TranslatableText("gui.yabm.backpack");
         rootPanel.add(new WLabel(label, WLabel.DEFAULT_TEXT_COLOR), 0, 0);
@@ -39,4 +43,12 @@ public class BackpackController extends CottonScreenController {
 	public int getCraftingResultSlotIndex() {
 		return -1;
 	}
+
+    @Override
+    public ItemStack onSlotClick(int slotNumber, int button, SlotActionType action, PlayerEntity player) {
+        if ((action == SlotActionType.PICKUP || action == SlotActionType.PICKUP_ALL) && this.getStacks().get(slotNumber).getItem() instanceof Backpack)
+            return ItemStack.EMPTY;
+        else
+            return super.onSlotClick(slotNumber, button, action, player);
+    }
 }
