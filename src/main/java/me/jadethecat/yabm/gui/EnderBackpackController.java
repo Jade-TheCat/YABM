@@ -1,6 +1,6 @@
 package me.jadethecat.yabm.gui;
 
-import io.github.cottonmc.cotton.gui.CottonScreenController;
+import io.github.cottonmc.cotton.gui.CottonCraftingController;
 import io.github.cottonmc.cotton.gui.widget.WGridPanel;
 import io.github.cottonmc.cotton.gui.widget.WItemSlot;
 import io.github.cottonmc.cotton.gui.widget.WLabel;
@@ -12,7 +12,7 @@ import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.text.TranslatableText;
 
-public class EnderBackpackController extends CottonScreenController {
+public class EnderBackpackController extends CottonCraftingController {
 
     public EnderBackpackController(int syncId, PlayerInventory playerInventory, PlayerEntity player) {
         super(RecipeType.SMELTING, syncId, playerInventory);

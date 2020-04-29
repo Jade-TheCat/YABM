@@ -1,6 +1,6 @@
 package me.jadethecat.yabm.gui;
 
-import io.github.cottonmc.cotton.gui.CottonScreenController;
+import io.github.cottonmc.cotton.gui.CottonCraftingController;
 import io.github.cottonmc.cotton.gui.widget.WGridPanel;
 import io.github.cottonmc.cotton.gui.widget.WItemSlot;
 import io.github.cottonmc.cotton.gui.widget.WLabel;
@@ -14,7 +14,7 @@ import net.minecraft.recipe.RecipeType;
 import net.minecraft.text.Text;
 import net.minecraft.text.TranslatableText;
 
-public class BackpackController extends CottonScreenController {
+public class BackpackController extends CottonCraftingController {
     ItemStack theStack;
     int theSlot;
     public BackpackController(int syncId, PlayerInventory playerInventory, ItemStack stack, int size, int slotId) {
@@ -46,7 +46,7 @@ public class BackpackController extends CottonScreenController {
 
     @Override
     public ItemStack onSlotClick(int slotNumber, int button, SlotActionType action, PlayerEntity player) {
-        if ((action == SlotActionType.PICKUP || action == SlotActionType.PICKUP_ALL) && this.getStacks().get(slotNumber).getItem() instanceof Backpack)
+        if (slotNumber >= 0 && (action == SlotActionType.PICKUP || action == SlotActionType.PICKUP_ALL) && this.getStacks().get(slotNumber).getItem() instanceof Backpack)
             return ItemStack.EMPTY;
         else
             return super.onSlotClick(slotNumber, button, action, player);
