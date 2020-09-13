@@ -31,7 +31,8 @@
     "fabricloader": ">=0.9.3",
     "fabric": "*",
     "libgui": "^3.0.0-beta.1",
-    "cardinal-components": "^2.6.0",
+    "cardinal-components-base": "^2.6.0",
+    "cardinal-components-entity": "^2.6.0",
     "nbtcrafting": "~2.0.0-rc.6"
   },
   "suggests": {
