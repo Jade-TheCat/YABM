@@ -1,0 +1,9 @@
+{
+  "type": "nbtcrafting:cauldron",
+  "input": {
+    "tag": "yabm:dyed_shulker_boxes"
+  },
+  "result": {
+    "item": "minecraft:shulker_box"
+  }
+}

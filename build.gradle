@@ -13,8 +13,12 @@ repositories {
 		url = "http://server.bbkr.space:8081/artifactory/libs-release/"
 	}
 	maven {
-		name = "Onyx Studios"
-		url = "https://maven.onyxstudios.dev"
+		name = "Ladysnake Libs"
+		url = "https://dl.bintray.com/ladysnake/libs"
+	}
+	maven {
+		name "Siphalor's Maven"
+		url "https://maven.siphalor.de"
 	}
 	maven {
         url = "https://jitpack.io"
@@ -36,26 +40,28 @@ minecraft {
 }
 
 dependencies {
-    minecraft "com.mojang:minecraft:1.15.2"
-    mappings "net.fabricmc:yarn:1.15.2+build.15:v2"
-    modImplementation "net.fabricmc:fabric-loader:0.8.2+build.194"
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings "net.fabricmc:yarn:${minecraft_version}+build.${yarn_build}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${loader_version}"
             
     //Fabric api
-    modImplementation "net.fabricmc.fabric-api:fabric-api:0.7.1+build.301-1.15"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
 
 
 	//LibGUI
-  	modCompile "io.github.cottonmc:LibGui:1.8.2+1.15.2"
-	include "io.github.cottonmc:LibGui:1.8.2+1.15.2"
+  	modCompile "io.github.cottonmc:LibGui:${libgui_version}"
+	include "io.github.cottonmc:LibGui:${libgui_version}"
 	
 	//Cardinal Components
-	modImplementation "com.github.OnyxStudios:Cardinal-Components-API:2.3.3"
-    include "com.github.OnyxStudios:Cardinal-Components-API:cardinal-components-base:2.3.3"
-	include "com.github.OnyxStudios:Cardinal-Components-API:cardinal-components-entity:2.3.3"
+	modImplementation "com.github.OnyxStudios:Cardinal-Components-API:${cardinal_components_version}"
+    include "com.github.OnyxStudios:Cardinal-Components-API:cardinal-components-base:${cardinal_components_version}"
+	include "com.github.OnyxStudios:Cardinal-Components-API:cardinal-components-entity:${cardinal_components_version}"
 
 	//NBTCrafting
-	modImplementation "nbt-crafting:nbtcrafting:1.2.15+1.15.1"
-	include "nbt-crafting:nbtcrafting:1.2.15+1.15.1"
+	modImplementation "de.siphalor:nbtcrafting-1.16:${nbtcrafting_version}"
+	include "de.siphalor:nbtcrafting-1.16:${nbtcrafting_version}"
+
+	modImplementation "io.github.prospector:modmenu:1.14.6+build.31"
 }
 
 processResources {

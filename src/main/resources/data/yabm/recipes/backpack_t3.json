@@ -1,5 +1,5 @@
 {
-    "type": "crafting_shapeless",
+    "type": "minecraft:crafting_shapeless",
     "ingredients": [
         {
             "item": "yabm:backpack",
@@ -19,7 +19,7 @@
             "item": "minecraft:diamond"
         },
         {
-            "tag": "yabm:shulker_boxes",
+            "item": "minecraft:shulker_box",
             "data": {
                 "deny": {
                     "BlockEntityTag": {
@@ -33,7 +33,7 @@
         "item": "yabm:backpack",
         "count": 1,
         "data": {
-            "$": "$ i0",
+            "Inventory": "$i0.Inventory",
             "Size": 2
         }
     }

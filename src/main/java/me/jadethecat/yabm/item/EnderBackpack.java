@@ -1,5 +1,6 @@
 package me.jadethecat.yabm.item;
 
+import me.jadethecat.yabm.gui.EnderBackpackGuiDescription;
 import net.fabricmc.fabric.api.container.ContainerProviderRegistry;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -22,7 +23,7 @@ public class EnderBackpack extends Item {
 
         ItemStack stack = player.getStackInHand(hand);
         if (!stack.isEmpty() && stack.getItem() instanceof EnderBackpack) {
-            ContainerProviderRegistry.INSTANCE.openContainer(new Identifier("yabm", "ender_backpack"), player, (buf) -> {});
+            player.openHandledScreen(new EnderBackpackGuiDescription.HandlerFactory());
         }
         
         return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, stack);

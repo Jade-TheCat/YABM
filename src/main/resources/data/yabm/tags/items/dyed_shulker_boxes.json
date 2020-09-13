@@ -1,0 +1,21 @@
+{
+    "replace": false,
+    "values": [
+        {"id": "minecraft:white_shulker_box"},
+        {"id": "minecraft:orange_shulker_box"},
+        {"id": "minecraft:magenta_shulker_box"},
+        {"id": "minecraft:light_blue_shulker_box"},
+        {"id": "minecraft:yellow_shulker_box"},
+        {"id": "minecraft:lime_shulker_box"},
+        {"id": "minecraft:pink_shulker_box"},
+        {"id": "minecraft:gray_shulker_box"},
+        {"id": "minecraft:light_gray_shulker_box"},
+        {"id": "minecraft:cyan_shulker_box"},
+        {"id": "minecraft:purple_shulker_box"},
+        {"id": "minecraft:blue_shulker_box"},
+        {"id": "minecraft:brown_shulker_box"},
+        {"id": "minecraft:green_shulker_box"},
+        {"id": "minecraft:red_shulker_box"},
+        {"id": "minecraft:black_shulker_box"}
+    ]
+}
