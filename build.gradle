@@ -17,8 +17,8 @@ repositories {
 		url = "https://dl.bintray.com/ladysnake/libs"
 	}
 	maven {
-		name "Siphalor's Maven"
-		url "https://maven.siphalor.de"
+		name = "Siphalor's Maven"
+		url = "https://maven.siphalor.de"
 	}
 	maven {
         url = "https://jitpack.io"
@@ -53,9 +53,9 @@ dependencies {
 	include "io.github.cottonmc:LibGui:${libgui_version}"
 	
 	//Cardinal Components
-	modImplementation "com.github.OnyxStudios:Cardinal-Components-API:${cardinal_components_version}"
-    include "com.github.OnyxStudios:Cardinal-Components-API:cardinal-components-base:${cardinal_components_version}"
-	include "com.github.OnyxStudios:Cardinal-Components-API:cardinal-components-entity:${cardinal_components_version}"
+	modImplementation "io.github.onyxstudios:Cardinal-Components-API:${cardinal_components_version}"
+    include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-base:${cardinal_components_version}"
+	include "io.github.onyxstudios.Cardinal-Components-API:cardinal-components-entity:${cardinal_components_version}"
 
 	//NBTCrafting
 	modImplementation "de.siphalor:nbtcrafting-1.16:${nbtcrafting_version}"
